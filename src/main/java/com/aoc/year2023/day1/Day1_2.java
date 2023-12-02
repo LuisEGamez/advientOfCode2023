@@ -1,4 +1,4 @@
-package com.aoc.aoc01;
+package com.aoc.year2023.day1;
 
 import com.aoc.LineReader;
 import org.jetbrains.annotations.NotNull;
@@ -7,29 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class Main {
+public class Day1_2 {
   public static void main(String[] args) {
 
-    LineReader lineReader = new LineReader("01.txt");
-
-    int sum = lineReader
-      .getLines()
-      .map(String::toCharArray)
-      .map(chars -> {
-        List<Integer> integers = new ArrayList<>();
-        for (char c : chars) {
-          if (Character.isDigit(c)) {
-            integers.add(Character.getNumericValue(c));
-          }
-        }
-        return integers;
-      })
-      .map(Main::calculateResult)
-      .mapToInt(Integer::intValue)
-      .sum();
-
-    System.out.println(sum);
-
+    LineReader lineReader = new LineReader("src/main/java/com/aoc/year2023/day1/Day1.txt");
 
     Map<String, Integer> map = Map
       .of("one", 1,
@@ -43,8 +24,7 @@ public class Main {
         "nine", 9
       );
 
-
-    int sum1 = lineReader
+    int total = lineReader
       .getLines()
       .map(String::toCharArray)
       .map(chars -> {
@@ -76,11 +56,11 @@ public class Main {
         }
         return result;
       })
-      .map(Main::calculateResult)
+      .map(Day1_2::calculateResult)
       .mapToInt(Integer::intValue)
       .sum();
 
-    System.out.println(sum1);
+    System.out.println(total);
   }
 
   private static @NotNull Integer calculateResult(

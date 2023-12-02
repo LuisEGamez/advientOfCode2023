@@ -1,9 +1,9 @@
-package com.aoc.aoc02;
+package com.aoc.year2023.day2;
 
 import com.aoc.LineReader;
 import org.jetbrains.annotations.NotNull;
 
-public class Main {
+public class Day2_1 {
 
   private static final @NotNull Integer RED_CUBE_MAX = 12;
   private static final @NotNull Integer GREEN_CUBE_MAX = 13;
@@ -11,7 +11,7 @@ public class Main {
 
   public static void main(String[] args) {
 
-    LineReader lineReader = new LineReader("02.txt");
+    LineReader lineReader = new LineReader("src/main/java/com/aoc/year2023/day2/Day2.txt");
 
     int total = lineReader
       .getLines()
