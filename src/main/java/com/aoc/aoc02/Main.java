@@ -5,9 +5,9 @@ import org.jetbrains.annotations.NotNull;
 
 public class Main {
 
-  private static @NotNull Integer RED_CUBE_MAX = 12;
-  private static @NotNull Integer GREEN_CUBE_MAX = 13;
-  private static @NotNull Integer BLUE_CUBE_MAX = 14;
+  private static final @NotNull Integer RED_CUBE_MAX = 12;
+  private static final @NotNull Integer GREEN_CUBE_MAX = 13;
+  private static final @NotNull Integer BLUE_CUBE_MAX = 14;
 
   public static void main(String[] args) {
 
