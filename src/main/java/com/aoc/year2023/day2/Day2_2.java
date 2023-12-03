@@ -5,8 +5,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.OptionalInt;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Day2_2 {
 
@@ -14,8 +12,6 @@ public class Day2_2 {
   public static void main(String[] args) {
 
     LineReader lineReader = new LineReader("src/main/java/com/aoc/year2023/day2/Day2.txt");
-
-    AtomicInteger x = new AtomicInteger(1);
 
     int total = lineReader
       .getLines()
@@ -76,25 +72,25 @@ public class Day2_2 {
 
 
         }
-         int minOfRedCubes = redCubes
+        int maxOfRedCubes = redCubes
           .stream()
           .mapToInt(Integer::intValue)
           .max()
-           .orElse(1);
+          .orElse(1); // return the max number of red cubes 1 if there are no red cubes
 
-        int minOfGreenCubes = greenCubes
-          .stream()
-          .mapToInt(Integer::intValue)
-          .max()
-          .orElse(1);
-
-        int minOfBlueCubes = blueCubes
+        int maxOfGreenCubes = greenCubes
           .stream()
           .mapToInt(Integer::intValue)
           .max()
           .orElse(1);
 
-        return minOfBlueCubes * minOfGreenCubes * minOfRedCubes;
+        int maxOfBlueCubes = blueCubes
+          .stream()
+          .mapToInt(Integer::intValue)
+          .max()
+          .orElse(1);
+
+        return maxOfBlueCubes * maxOfGreenCubes * maxOfRedCubes;
 
       })
       .mapToInt(Integer::intValue)
